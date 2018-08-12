@@ -8,14 +8,15 @@ class Task extends Component {
       isCompleted,
       toggleTask,
       addTask,
-      removeTask
+      removeTask,
+      activeFilter
     } = this.props;
 
     return isCompleted ? (
       <li
         onClick={() => {
           toggleTask(id);
-          addTask();
+          addTask(activeFilter);
         }}
       >
         <del> {name} </del>
@@ -24,7 +25,7 @@ class Task extends Component {
       <li
         onClick={() => {
           toggleTask(id);
-          removeTask();
+          removeTask(activeFilter);
         }}
       >
         {name}
