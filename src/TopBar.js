@@ -1,4 +1,6 @@
 import React from "react";
+import "bootstrap/dist/js/bootstrap.bundle.min";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const TopBar = () => {
   return (
@@ -26,16 +28,18 @@ const TopBar = () => {
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              Features
+              For The Horde!
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
-              Pricing
+              For The Alliance!
             </a>
           </li>
         </ul>
-        <span class="navbar-text">Navbar text with an inline element</span>
+        <span class="navbar-text">
+          <i class="fab fa-github fa-lg" />
+        </span>
       </div>
     </nav>
   );

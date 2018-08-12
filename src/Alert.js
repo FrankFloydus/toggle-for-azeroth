@@ -2,7 +2,10 @@ import React from "react";
 
 const Alert = ({ dismiss }) => {
   return (
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <div
+      className="alert alert-success alert-dismissible fade show"
+      role="alert"
+    >
       <strong>Toggle For Azeroth</strong> use the browser
       <a
         target="_blank"
@@ -16,7 +19,7 @@ const Alert = ({ dismiss }) => {
       <button
         onClick={() => dismiss()}
         type="button"
-        class="close"
+        className="close"
         data-dismiss="alert"
         aria-label="Close"
       >

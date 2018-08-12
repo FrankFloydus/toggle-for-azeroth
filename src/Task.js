@@ -23,6 +23,7 @@ class Task extends Component {
       </li>
     ) : (
       <li
+        className="disabled"
         onClick={() => {
           toggleTask(id);
           removeTask(activeFilter);
