@@ -1,14 +1,17 @@
 export default {
-  percentages: [
-    {
-      id: 1010,
-      filter: "primary_task",
-      percentage: 0
-    },
-    {
-      id: 2020,
-      filter: "daily_task",
-      percentage: 0
-    }
-  ]
+  primary_task: {
+    percentage: 0
+  },
+  daily_task: {
+    percentage: 0
+  },
+  weekly_task: {
+    percentage: 0
+  },
+  dungeon: {
+    percentage: 0
+  },
+  zone: {
+    percentage: 0
+  }
 };

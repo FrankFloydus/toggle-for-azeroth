@@ -12,12 +12,22 @@ class TaskList extends Component {
       toggleTask,
       percentage,
       addTask,
-      removeTask
+      removeTask,
+      resetList
     } = this.props;
 
     return (
-      <Container columns="col-md-6">
-        <h2 className="h4">{title}</h2>
+      <Container columns="col">
+        <div className="d-flex justify-content-between">
+          <h2 className="h4">{title}</h2>
+          <button
+            className="btn btn-danger btn-sm"
+            onClick={() => resetList(activeFilter)}
+          >
+            Reset
+          </button>
+        </div>
+
         <ProgressBar percentage={percentage} />
         <ul>
           {list
