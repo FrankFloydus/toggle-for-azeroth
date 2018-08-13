@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+  .main-link:hover {
+    color: #a037d4 !important;
+  }
+  .disabled.main-link:hover {
+    color: #0f0f0f !important;
+  }
+}
+
+.main-link {
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+  font-size: 18px;
+}
+
+.disabled {
+  color: #c1c1c1;
+}
+
+ul {
+  list-style-type: circle;
+}

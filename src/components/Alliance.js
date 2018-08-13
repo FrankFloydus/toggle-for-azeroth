@@ -1,10 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import alliance_logo from "./images/Logo-alliance.png";
+import alliance_logo from "../images/Logo-alliance.png";
 import React, { Component } from "react";
-import data from "./data/data";
-import percentages from "./data/percentages";
+import data from "../data/data";
+import percentages from "../data/percentages";
 import { Link } from "react-router-dom";
 
 import TaskList from "./TaskList";
@@ -115,26 +115,34 @@ class Alliance extends Component {
 
     return (
       <React.Fragment>
-        <div className="container pb-5">
+        <div className="container pb-5 px-4 px-md-2">
           {this.state.popup && <Alert dismiss={this.dismiss} />}
 
           {this.state.tasks && (
             <main>
-              <div className="d-flex align-items-center mb-5">
-                <img
-                  style={imgContained}
-                  className="img-fluid"
-                  src={alliance_logo}
-                />
-                <h1 className="text-uppercase text-primary h2 font-weight-light ml-3">
-                  {this.state.faction} version
-                </h1>
-                <Link to="/horde" class="badge badge-danger ml-3">
-                  The horror! Switch to horde
-                </Link>
+              <div className="row">
+                <div className="col-sm-12 text-center mb-2 mb-md-0">
+                  <div className="d-md-flex align-items-md-center mb-5">
+                    <img
+                      alt={`${this.state.faction}-logo`}
+                      style={imgContained}
+                      className="img-fluid"
+                      src={alliance_logo}
+                    />
+                    <h1 className="text-uppercase text-primary h2 font-weight-light ml-3">
+                      {this.state.faction} version
+                    </h1>
+                    <Link
+                      to={process.env.PUBLIC_URL + "/horde"}
+                      className="badge badge-danger ml-3"
+                    >
+                      The horror! Switch to horde
+                    </Link>
+                  </div>
+                </div>
               </div>
               <div className="row">
-                <div className="col-md-4">
+                <div className="col-sm-12 col-lg-4">
                   {" "}
                   <TaskList
                     title={"Primary Goals"}

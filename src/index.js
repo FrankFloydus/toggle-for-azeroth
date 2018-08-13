@@ -1,24 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./Home";
-import Horde from "./Horde";
-import Alliance from "./Alliance";
+import AppRouter from "./router/AppRouter";
 import registerServiceWorker from "./registerServiceWorker";
-import { BrowserRouter, Route } from "react-router-dom";
-import TopBar from "./TopBar";
-import Header from "./Header";
+import "./global.css";
 
-const routes = (
-  <BrowserRouter>
-    <div>
-      <TopBar />
-      <Header />
-      <Route path="/" component={Home} exact />
-      <Route path="/horde" component={Horde} />
-      <Route path="/alliance" component={Alliance} />
-    </div>
-  </BrowserRouter>
-);
-
-ReactDOM.render(routes, document.getElementById("root"));
+ReactDOM.render(<AppRouter />, document.getElementById("root"));
 registerServiceWorker();

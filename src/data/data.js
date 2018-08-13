@@ -7,13 +7,13 @@ export default {
       type: "primary_task"
     },
     {
-      goal: "Reach 360 item level",
+      goal: "Reach 363+ item level",
       id: "aaeada79-df28-439a-9ced-d3ac412ea679",
       isCompleted: false,
       type: "primary_task"
     },
     {
-      goal: "Reach level 21 of Heart of Azeroth",
+      goal: "Reach level 23 of Heart of Azeroth",
       id: "bbeada19-df21-439a-9ced-d3ac412ea679",
       isCompleted: false,
       type: "primary_task"
@@ -87,6 +87,24 @@ export default {
     {
       goal: "Do the weekly Expedition Quest",
       id: "w664-2ji9k94-12f4ft3",
+      isCompleted: false,
+      type: "weekly_task"
+    },
+    {
+      goal: "Do a +10 Mythic Plus Keystone",
+      id: "j854-2hk9t64-12f4ft3",
+      isCompleted: false,
+      type: "weekly_task"
+    },
+    {
+      goal: "Kill the world boss",
+      id: "j254-h2t0h64-99f4ft3",
+      isCompleted: false,
+      type: "weekly_task"
+    },
+    {
+      goal: "Do the warfront + quest for 370 ilvl item",
+      id: "j254-62v0h64-00f4ft3",
       isCompleted: false,
       type: "weekly_task"
     },

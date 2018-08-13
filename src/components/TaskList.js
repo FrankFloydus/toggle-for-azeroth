@@ -42,6 +42,7 @@ class TaskList extends Component {
             .map(item => {
               return (
                 <Task
+                  key={item.id}
                   id={item.id}
                   name={item.goal}
                   isCompleted={item.isCompleted}

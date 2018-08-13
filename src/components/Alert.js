@@ -9,13 +9,14 @@ const Alert = ({ dismiss }) => {
       <strong>Toggle For Azeroth</strong> use the browser
       <a
         target="_blank"
+        rel="noopener noreferrer"
         href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
-        class="alert-link"
+        className="alert-link"
       >
         &nbsp;localStorage&nbsp;
       </a>
       to save your data; you don't lose your tracking unless you clear the
-      cache.
+      application data.
       <button
         onClick={() => dismiss()}
         type="button"

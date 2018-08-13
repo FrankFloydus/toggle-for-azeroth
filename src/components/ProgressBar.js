@@ -28,7 +28,7 @@ const ProgressBar = ({ percentage }) => {
   const classes = getClasses(percentage);
 
   return (
-    <div class="progress mt-3 mb-2" style={barHeight}>
+    <div className="progress mt-3 mb-2" style={barHeight}>
       <div
         className={classes}
         role="progressbar"

@@ -14,6 +14,7 @@ class Task extends Component {
 
     return isCompleted ? (
       <li
+        className="disabled main-link mb-2 mb-md-0"
         onClick={() => {
           toggleTask(id);
           addTask(activeFilter);
@@ -23,7 +24,7 @@ class Task extends Component {
       </li>
     ) : (
       <li
-        className="disabled"
+        className="main-link mb-2 mb-md-0"
         onClick={() => {
           toggleTask(id);
           removeTask(activeFilter);

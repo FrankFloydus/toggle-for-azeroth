@@ -1,15 +1,17 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import alliance_logo from "../images/Logo-alliance.png";
+import horde_logo from "../images/Logo-horde.png";
 import React, { Component } from "react";
-import data from "./data/data";
-import percentages from "./data/percentages";
+import data from "../data/data";
+import percentages from "../data/percentages";
+import { Link } from "react-router-dom";
 
-import Header from "./Header";
-import TopBar from "./TopBar";
 import TaskList from "./TaskList";
 import Alert from "./Alert";
 
-class Horde extends Component {
+class Alliance extends Component {
   state = {
     faction: "horde",
     tasks: data.tasks,
@@ -108,20 +110,45 @@ class Horde extends Component {
   };
 
   render = () => {
+    const imgContained = {
+      height: "55px"
+    };
+
     return (
       <React.Fragment>
-        <TopBar />
-        <div className="container p-5">
+        <div className="container pb-5 px-4 px-md-2">
           {this.state.popup && <Alert dismiss={this.dismiss} />}
 
-          <Header />
           {this.state.tasks && (
             <main>
               <div className="row">
-                <div className="col-md-4">
+                <div className="col-sm-12 text-center mb-2 mb-md-0">
+                  <div className="d-md-flex align-items-md-center mb-5">
+                    <img
+                      alt={`${this.state.faction}-logo`}
+                      style={imgContained}
+                      className="img-fluid"
+                      src={horde_logo}
+                    />
+                    <h1 className="text-uppercase text-danger h2 font-weight-light ml-3">
+                      {this.state.faction} version
+                    </h1>
+                    <Link
+                      to={process.env.PUBLIC_URL + "/alliance"}
+                      className="badge badge-primary ml-3"
+                    >
+                      I am not so ugly! Switch to alliance
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-sm-12 col-lg-4">
                   {" "}
                   <TaskList
                     title={"Primary Goals"}
+                    subtitle={"Your long term goals"}
+                    icon={"fab fa-accessible-icon"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
@@ -134,6 +161,8 @@ class Horde extends Component {
                 <div className="col-md-4">
                   <TaskList
                     title={"Daily Tasks"}
+                    subtitle={"Tasks to do every day"}
+                    icon={"fab fa-angellist"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
@@ -147,6 +176,8 @@ class Horde extends Component {
                   {" "}
                   <TaskList
                     title={"Weekly Tasks"}
+                    subtitle={"Tasks to do every week"}
+                    icon={"fas fa-crosshairs"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
@@ -161,7 +192,9 @@ class Horde extends Component {
               <div className="row">
                 <div className="col-md-4">
                   <TaskList
-                    title={"Dungeons Tracker"}
+                    title={"Dungeons"}
+                    subtitle={"Useful to track dungeons you did"}
+                    icon={"fas fa-skull"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
@@ -173,13 +206,47 @@ class Horde extends Component {
                 </div>
                 <div className="col-md-4">
                   <TaskList
-                    title={"Zone Tracker"}
+                    title={"Zones"}
+                    subtitle={"To track finished zones"}
+                    icon={"fas fa-globe-americas"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
                     removeTask={this.removeTask}
                     activeFilter={"zone"}
                     percentage={this.state.percentages.zone.percentage}
+                    resetList={this.resetList}
+                  />
+                </div>
+                <div className="col-md-4">
+                  <TaskList
+                    title={"Reputations"}
+                    subtitle={"To track exalted reputations"}
+                    icon={"fas fa-crown"}
+                    list={this.state.tasks}
+                    toggleTask={this.toggleTask}
+                    addTask={this.addTask}
+                    removeTask={this.removeTask}
+                    activeFilter={"faction_horde"}
+                    percentage={this.state.percentages.faction_horde.percentage}
+                    resetList={this.resetList}
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-4">
+                  <TaskList
+                    title={"War Campaign"}
+                    subtitle={"Your war campaign progress"}
+                    icon={"fas fa-gavel"}
+                    list={this.state.tasks}
+                    toggleTask={this.toggleTask}
+                    addTask={this.addTask}
+                    removeTask={this.removeTask}
+                    activeFilter={"campaign_horde"}
+                    percentage={
+                      this.state.percentages.campaign_horde.percentage
+                    }
                     resetList={this.resetList}
                   />
                 </div>
@@ -192,4 +259,4 @@ class Horde extends Component {
   };
 }
 
-export default Horde;
+export default Alliance;
