@@ -21,7 +21,8 @@ const Header = () => {
             </Link>
           </strong>{" "}
           of Well of Eternity -&nbsp;
-          <strong>Bnet:</strong> Holydeath#2942.
+          <strong>Bnet:</strong> Holydeath#2942 -<strong> Discord:</strong>{" "}
+          @Devilseethe#8308
         </p>
         <p className="lead">
           Based on the fantastic{" "}
@@ -48,12 +49,6 @@ const Header = () => {
           </strong>{" "}
           yet I decided to list them so I do not have to do it later.{" "}
         </p>
-        <p className="mt-2 text-center text-md-left">
-          <u>To report a bug, a typo or a suggestion</u> send me a message on{" "}
-          <strong>Discord</strong>
-          <mark>@Devilseethe#8308</mark>.
-        </p>
-
         <hr className="mb-4 mt-5" />
       </div>
     </header>

@@ -37,6 +37,12 @@ export default {
       type: "primary_task"
     },
     {
+      goal: "Get Contracts for farming reputation",
+      id: "555b1d61-a088-47e4-044c-bae075cc3abd",
+      isCompleted: false,
+      type: "primary_task"
+    },
+    {
       goal: "Complete the War Campaign",
       id: "aecd048e-78c9-47c5-ac9c-fb5a994bbdda",
       isCompleted: false,
@@ -105,6 +111,18 @@ export default {
     {
       goal: "Do the warfront + quest for 370 ilvl item",
       id: "j254-62v0h64-00f4ft3",
+      isCompleted: false,
+      type: "weekly_task"
+    },
+    {
+      goal: "Clear Normal Uldir",
+      id: "k254-11t0h11-00f4ft3",
+      isCompleted: false,
+      type: "weekly_task"
+    },
+    {
+      goal: "Clear Heroic Uldir",
+      id: "k254-22t0h22-11g6ft3",
       isCompleted: false,
       type: "weekly_task"
     },
