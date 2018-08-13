@@ -1,7 +1,7 @@
 {
   "name": "bfa-tasks",
   "version": "0.1.0",
-  "homepage": "https://FrankFloydus.github.io/bfa-tasks",
+  "homepage": "https://FrankFloydus.github.io/toggle-for-azeroth",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.3",
