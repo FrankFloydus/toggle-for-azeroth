@@ -46,7 +46,7 @@ const Header = () => {
           <strong>
             some tasks listed will not be available in game at launch
           </strong>{" "}
-          yet I decided to list them so I don't have to do that later.{" "}
+          yet I decided to list them so I do not have to do it later.{" "}
         </p>
         <p className="mt-2 text-center text-md-left">
           <u>To report a bug, a typo or a suggestion</u> send me a message on{" "}
