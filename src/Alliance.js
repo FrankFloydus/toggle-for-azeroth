@@ -1,8 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import alliance_logo from "./images/Logo-alliance.png";
 import React, { Component } from "react";
 import data from "./data/data";
 import percentages from "./data/percentages";
+import { Link } from "react-router-dom";
 
 import TaskList from "./TaskList";
 import Alert from "./Alert";
@@ -106,18 +109,37 @@ class Alliance extends Component {
   };
 
   render = () => {
+    const imgContained = {
+      height: "55px"
+    };
+
     return (
       <React.Fragment>
-        <div className="container px-5 pb-5">
+        <div className="container pb-5">
           {this.state.popup && <Alert dismiss={this.dismiss} />}
 
           {this.state.tasks && (
-            <main className="mt-5">
+            <main>
+              <div className="d-flex align-items-center mb-5">
+                <img
+                  style={imgContained}
+                  className="img-fluid"
+                  src={alliance_logo}
+                />
+                <h1 className="text-uppercase text-primary h2 font-weight-light ml-3">
+                  {this.state.faction} version
+                </h1>
+                <Link to="/horde" class="badge badge-danger ml-3">
+                  The horror! Switch to horde
+                </Link>
+              </div>
               <div className="row">
                 <div className="col-md-4">
                   {" "}
                   <TaskList
                     title={"Primary Goals"}
+                    subtitle={"Your long term goals"}
+                    icon={"fab fa-accessible-icon"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
@@ -130,6 +152,8 @@ class Alliance extends Component {
                 <div className="col-md-4">
                   <TaskList
                     title={"Daily Tasks"}
+                    subtitle={"Tasks to do every day"}
+                    icon={"fab fa-angellist"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
@@ -143,6 +167,8 @@ class Alliance extends Component {
                   {" "}
                   <TaskList
                     title={"Weekly Tasks"}
+                    subtitle={"Tasks to do every week"}
+                    icon={"fas fa-crosshairs"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
@@ -157,7 +183,9 @@ class Alliance extends Component {
               <div className="row">
                 <div className="col-md-4">
                   <TaskList
-                    title={"Dungeons Tracker"}
+                    title={"Dungeons"}
+                    subtitle={"Useful to track dungeons you did"}
+                    icon={"fas fa-skull"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
@@ -169,13 +197,49 @@ class Alliance extends Component {
                 </div>
                 <div className="col-md-4">
                   <TaskList
-                    title={"Zone Tracker"}
+                    title={"Zones"}
+                    subtitle={"To track finished zones"}
+                    icon={"fas fa-globe-americas"}
                     list={this.state.tasks}
                     toggleTask={this.toggleTask}
                     addTask={this.addTask}
                     removeTask={this.removeTask}
                     activeFilter={"zone"}
                     percentage={this.state.percentages.zone.percentage}
+                    resetList={this.resetList}
+                  />
+                </div>
+                <div className="col-md-4">
+                  <TaskList
+                    title={"Reputations"}
+                    subtitle={"To track exalted reputations"}
+                    icon={"fas fa-crown"}
+                    list={this.state.tasks}
+                    toggleTask={this.toggleTask}
+                    addTask={this.addTask}
+                    removeTask={this.removeTask}
+                    activeFilter={"faction_alliance"}
+                    percentage={
+                      this.state.percentages.faction_alliance.percentage
+                    }
+                    resetList={this.resetList}
+                  />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-md-4">
+                  <TaskList
+                    title={"War Campaign"}
+                    subtitle={"Your war campaign progress"}
+                    icon={"fas fa-gavel"}
+                    list={this.state.tasks}
+                    toggleTask={this.toggleTask}
+                    addTask={this.addTask}
+                    removeTask={this.removeTask}
+                    activeFilter={"campaign_alliance"}
+                    percentage={
+                      this.state.percentages.campaign_alliance.percentage
+                    }
                     resetList={this.resetList}
                   />
                 </div>

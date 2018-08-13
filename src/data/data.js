@@ -7,8 +7,14 @@ export default {
       type: "primary_task"
     },
     {
-      goal: "Reach 350 item level",
+      goal: "Reach 360 item level",
       id: "aaeada79-df28-439a-9ced-d3ac412ea679",
+      isCompleted: false,
+      type: "primary_task"
+    },
+    {
+      goal: "Reach level 21 of Heart of Azeroth",
+      id: "bbeada19-df21-439a-9ced-d3ac412ea679",
       isCompleted: false,
       type: "primary_task"
     },
@@ -19,7 +25,7 @@ export default {
       type: "primary_task"
     },
     {
-      goal: "5 Exalted Reputations",
+      goal: "Reach 5 Exalted Reputations",
       id: "37d05b08-6cd8-4f9b-bb28-445200d571b9",
       isCompleted: false,
       type: "primary_task"
@@ -63,6 +69,12 @@ export default {
     {
       goal: "Transmute daily Expulsom (if alchemy)",
       id: "w554-2hy7q14-12f4ft3",
+      isCompleted: false,
+      type: "daily_task"
+    },
+    {
+      goal: "Send followers on mission",
+      id: "w224-2rt7q14-99f4ft3",
       isCompleted: false,
       type: "daily_task"
     },
@@ -199,47 +211,126 @@ export default {
       goal: "Zuldazar",
       id: 16,
       type: "zone"
-    }
-  ],
-  factions: {
-    horde: [
-      "The Honorbound",
-      "Voldunai",
-      "Talanji's Expedition",
-      "Zandalari Empires"
-    ],
-    alliance: [
-      "Order of Embers",
-      "Storm's Wake",
-      "Proudmoore Admiralty",
-      "7th Legion"
-    ],
-    neutral: ["Champion's of Azeroth", "Tortollan Seekers"]
-  },
-  war_campaign: {
-    horde: [
-      "Establishing Footholds",
-      "The First Assault",
-      "The Marshal's Grave",
-      "Death of a Tidesage",
-      "At the Bottom of the Sea",
-      "The Strike on Boralus"
-    ],
-    alliance: [
-      "Establishing Footholds",
-      "Blood in the Sand",
-      "Chasing Darkness",
-      "A Golden Opportunity",
-      "Blood in the Water",
-      "The Strike on Zuldazar"
-    ]
-  },
-  locked: {
-    plus: {
-      title: "+10 Key"
     },
-    warfront: {
-      title: "Do a warfront for the 370 item level quest"
+    {
+      goal: "The Honorbound",
+      id: 17,
+      type: "faction_horde"
+    },
+    {
+      goal: "Voldunai",
+      id: 18,
+      type: "faction_horde"
+    },
+    {
+      goal: "Talanji's Expedition",
+      id: 19,
+      type: "faction_horde"
+    },
+    {
+      goal: "Zandalari Empires",
+      id: 20,
+      type: "faction_horde"
+    },
+    {
+      goal: "Order of Embers",
+      id: 21,
+      type: "faction_alliance"
+    },
+    {
+      goal: "Storm's Wake",
+      id: 22,
+      type: "faction_alliance"
+    },
+    {
+      goal: "Proudmoore Admiralty",
+      id: 23,
+      type: "faction_alliance"
+    },
+    {
+      goal: "7th Legion",
+      id: 24,
+      type: "faction_alliance"
+    },
+    {
+      goal: "Champion's of Azeroth",
+      id: 25,
+      type: "faction_alliance"
+    },
+    {
+      goal: "Tortollan Seekers",
+      id: 26,
+      type: "faction_alliance"
+    },
+    {
+      goal: "Champion's of Azeroth",
+      id: 26,
+      type: "faction_horde"
+    },
+    {
+      goal: "Tortollan Seekers",
+      id: 27,
+      type: "faction_horde"
+    },
+    {
+      goal: "Establishing Footholds Seekers",
+      id: 28,
+      type: "campaign_horde"
+    },
+    {
+      goal: "The First Assault",
+      id: 29,
+      type: "campaign_horde"
+    },
+    {
+      goal: "The Marshal's Grave",
+      id: 30,
+      type: "campaign_horde"
+    },
+    {
+      goal: "Death of a Tidesage",
+      id: 31,
+      type: "campaign_horde"
+    },
+    {
+      goal: "At the Bottom of the Sea",
+      id: 32,
+      type: "campaign_horde"
+    },
+    {
+      goal: "The Strike on Boralus",
+      id: 33,
+      type: "campaign_horde"
+    },
+    {
+      goal: "Establishing Footholds",
+      id: 34,
+      type: "campaign_alliance"
+    },
+    {
+      goal: "Blood in the Sand",
+      id: 35,
+      type: "campaign_alliance"
+    },
+    {
+      goal: "Chasing Darkness",
+      id: 36,
+      type: "campaign_alliance"
+    },
+    {
+      goal: "A Golden Opportunity",
+      id: 37,
+      type: "campaign_alliance"
+    },
+    {
+      goal: "Blood in the Water",
+      id: 38,
+      type: "campaign_alliance"
+    },
+    {
+      goal: "The Strike on Zuldazar",
+      id: 39,
+      type: "campaign_alliance"
     }
-  }
+  ]
 };

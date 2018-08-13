@@ -13,5 +13,17 @@ export default {
   },
   zone: {
     percentage: 0
+  },
+  faction_alliance: {
+    percentage: 0
+  },
+  faction_horde: {
+    percentage: 0
+  },
+  campaign_horde: {
+    percentage: 0
+  },
+  campaign_alliance: {
+    percentage: 0
   }
 };

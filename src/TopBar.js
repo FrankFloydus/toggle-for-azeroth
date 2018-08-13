@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const TopBar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">
+    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a className="navbar-brand" href="#">
         Toggle for Azeroth
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarText"
@@ -17,29 +18,28 @@ const TopBar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon" />
+        <span className="navbar-toggler-icon" />
       </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+      <div className="collapse navbar-collapse" id="navbarText">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/horde">
               For The Horde!
-            </a>
+            </Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+          <li className="nav-item">
+            <Link className="nav-link" to="/alliance">
               For The Alliance!
-            </a>
+            </Link>
           </li>
         </ul>
-        <span class="navbar-text">
-          <i class="fab fa-github fa-lg" />
-        </span>
+        <a
+          href="https://github.com/FrankFloydus/toggle-for-azeroth"
+          className="nav-link text-light"
+          target="_blank"
+        >
+          <i className="fab fa-github fa-lg" />
+        </a>
       </div>
     </nav>
   );

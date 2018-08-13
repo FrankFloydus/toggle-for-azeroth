@@ -14,8 +14,8 @@ const Alert = ({ dismiss }) => {
       >
         &nbsp;localStorage&nbsp;
       </a>
-      to save your data; so, as long as you don't clear the cache you are all
-      set!
+      to save your data; you don't lose your tracking unless you clear the
+      cache.
       <button
         onClick={() => dismiss()}
         type="button"
